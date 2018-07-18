@@ -2,23 +2,12 @@
    Arduino Clock with Coloer SPI oled
    Tempature reading that changes color based on tempature
    Battery level that changes color based on capasity
-
-   ToDo: Add Menu, Add alarm saved to eprom
-
    BY: C4PT41ND34DP00L
-
-   sclk = 13
-   data = 11
-   cd =    8
-   cs =   10
-   reset = 9
-   Bat = A1 (if 5v arduino must connect + of bat to A1 before any boost converter)
-   TMP36 = A0
-   DS3113
-   GND = GND
-   VCC = 5V
-   SDA = A4
-   SCL = A5
+   
+   OLED: sclk = 13, data = 11, cd = 8, cs = 10, reset = 9
+   Bat: Positive = A1, GND = GND (if 5v arduino must connect + of bat to A1 before any boost converter)
+   TMP36: Sense Pin = A0, GND = GND, Positive = 3.3v
+   DS3113: GND = GND,  VCC = 5V, SDA = A4, SCL = A5
 */
 
 #include <SPI.h>
