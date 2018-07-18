@@ -1,0 +1,11 @@
+Part,Cost,Qty ordered,Qty Needed,
+Top PCB,15.6,3,1,https://oshpark.com/
+Body PCB,37.05,3,1,https://oshpark.com/
+Buttons,4.98,100,3,https://www.amazon.com/gp/product/B01CGMP9GY/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1
+OLED,19.98,1,1,https://www.amazon.com/gp/product/B01MZ8AOIF/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1
+Arduino Nano,13.86,3,1,https://www.amazon.com/gp/product/B0713XK923/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1
+Bost Converter,6.98,5,1,https://www.amazon.com/gp/product/B01FDD3AYQ/ref=od_aui_detailpages00?ie=UTF8&psc=1
+TP4056,6.99,5,1,https://www.amazon.com/dp/B01DRT4PWY/?coliid=I2Y7WOB7YG2VYU&colid=1VKDOJCDBIQIF&psc=0&ref_=lv_ov_lig_dp_it
+DS3231 ,5.99,1,1,https://www.amazon.com/gp/product/B00LZCTMJM/ref=oh_aui_detailpage_o08_s01?ie=UTF8&psc=1
+TMP36,9.99,5,1,https://www.amazon.com/gp/product/B01GH32AQU/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1
+Buzzer,5.99,10,1,https://www.amazon.com/Cylewet-Terminals-Electronic-Electromagnetic-Impedance/dp/B01NCOXB2Q/ref=sr_1_2?ie=UTF8&qid=1531942339&sr=8-2&keywords=arduino+buzzer
