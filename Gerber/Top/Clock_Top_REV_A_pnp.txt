@@ -1,0 +1,30 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Clock_Top_REV_A
+*Date=10:15:36
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;THT;5.17454;-1.50566;90;Bottom;J6
+2;;;32.893;-1.5949;0;Bottom;Copper Fill8
+3;;;42.3164;-11.9073;0;Bottom;Copper Fill7
+4;;;42.3164;-11.9073;0;Bottom;Copper Fill1
+5;;;52.0954;-1.5695;0;Bottom;Copper Fill6
+6;;[THT];23.4433;-4.96297;0;Bottom;S1
+7;;THT;79.0888;-1.77722;90;Bottom;J4
+8;;;7.23505;-8.86494;0;Bottom;J7
+9;;;61.595;-2.6109;0;Bottom;Copper Fill3
+10;;;70.3834;-2.4331;0;Bottom;Copper Fill4
+11;;[THT];61.841;-4.74368;0;Bottom;S3
+12;;;68.2244;-1.4425;0;Bottom;Copper Fill9
+13;;;7.7978;-4.3381;0;Bottom;Copper Fill2
+14;;[THT];42.5596;-4.891;0;Bottom;S2
+15;;;76.5048;-2.9411;0;Bottom;Copper Fill5
