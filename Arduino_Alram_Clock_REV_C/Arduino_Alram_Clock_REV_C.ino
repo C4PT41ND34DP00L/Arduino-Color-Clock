@@ -3,7 +3,7 @@
    Tempature reading that changes color based on tempature
    Battery level that changes color based on capasity
    BY: C4PT41ND34DP00L
-   
+
    OLED: sclk = 13, data = 11, cd = 8, cs = 10, reset = 9
    Bat: Positive = A1, GND = GND (if 5v arduino must connect + of bat to A1 before any boost converter)
    TMP36: Sense Pin = A0, GND = GND, Positive = 3.3v
@@ -20,7 +20,7 @@
 RTC_DS1307 RTC;
 char monthString[37] = {"JanFebMarAprMayJunJulAugSepOctNovDec"};
 int  monthIndex[122] = {0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33};
-char daysOfTheWeek[7][12] = {"Sun","Mon", "Tues", "Wend", "Thu", "Fri", "Sat"};
+char daysOfTheWeek[7][12] = {"Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"};
 
 /***********************************************************************************************/
 
@@ -65,7 +65,7 @@ void loop(void)
   ucg.setColor(0, 204, 0, 204);
   ucg.setColor(1, 0, 0, 0);
   ucg.setFont(ucg_font_u8glib_4_hf);
-  ucg.setPrintPos(15, 54);
+  ucg.setPrintPos(20, 54);
   ucg.print(daysOfTheWeek[now.dayOfTheWeek()]);
   ucg.print(" ");
   for (int i = 0; i <= 2; i++) {
@@ -80,7 +80,7 @@ void loop(void)
   ucg.setColor(0, 0, 51, 204);
   ucg.setColor(1, 0, 0, 0);
   ucg.setFont(ucg_font_u8glib_4_hf);
-  ucg.setPrintPos(20, 63);
+  ucg.setPrintPos(22, 64);
   ucg.print("=/\\=");
   ucg.print("  ");
   ucg.print(now.year() + 100);
@@ -97,9 +97,15 @@ void loop(void)
   const uint8_t h = now.hour();
   const uint8_t hr_12 = h % 12;
 
-
-  if (hr_12 < 10) {              
+  if (h < 10) {
+    ucg.print("0");
+  }
+  else {
     ucg.print("");
+  }
+
+  if (hr_12 < 10) {
+    //ucg.print(" ");
     ucg.print((h > 12) ? h - 12 : ((h == 0) ? 12 : h), DEC); // Conversion to AM/PM
   }
   else {
@@ -168,39 +174,52 @@ void loop(void)
 
   //Battery Level Display
   //Set up color of battery level
-  if (battery.level() < 80) {
+  if (battery.level() < 80 && battery.level() > 60) {
     ucg.setFontMode(UCG_FONT_MODE_SOLID);
     ucg.setFont(ucg_font_04b_03b_hf);
     ucg.setColor(0, 255, 255, 0);
     ucg.setColor(1, 0, 0, 0);
+    ucg.setPrintPos(0, 10);
+    ucg.print(battery.level());
+    ucg.print("%");
   }
-  else if (battery.level() < 60) {
+  else if (battery.level() < 59 && battery.level() > 40) {
     ucg.setFontMode(UCG_FONT_MODE_SOLID);
     ucg.setFont(ucg_font_04b_03b_hf);
     ucg.setColor(0, 255, 153, 0);
     ucg.setColor(1, 0, 0, 0);
+    ucg.setPrintPos(0, 10);
+    ucg.print(battery.level());
+    ucg.print("%");
   }
-  else if (battery.level() < 40) {
+  else if (battery.level() < 39 && battery.level() > 25) {
     ucg.setFontMode(UCG_FONT_MODE_SOLID);
     ucg.setFont(ucg_font_04b_03b_hf);
     ucg.setColor(0, 255, 51, 0);
     ucg.setColor(1, 0, 0, 0);
+    ucg.setPrintPos(0, 10);
+    ucg.print(battery.level());
+    ucg.print("%");
   }
-  else if (battery.level() < 25) {
+  else if (battery.level() < 24  && battery.level() > -2) {
     ucg.setFontMode(UCG_FONT_MODE_SOLID);
     ucg.setFont(ucg_font_04b_03b_hf);
     ucg.setColor(0, 255, 0, 0);
     ucg.setColor(1, 0, 0, 0);
+    ucg.setPrintPos(0, 10);
+    ucg.print(battery.level());
+    ucg.print("%");
   }
   else {
     ucg.setFontMode(UCG_FONT_MODE_SOLID);
     ucg.setFont(ucg_font_04b_03b_hf);
     ucg.setColor(0, 0, 204, 0);
     ucg.setColor(1, 0, 0, 0);
+    ucg.setPrintPos(0, 10);
+    ucg.print(battery.level());
+    ucg.print("%");
   }
-  ucg.setPrintPos(0, 10);
-  ucg.print(battery.level());
-  ucg.print("%");
+
   ucg.print("  ");
   // **************** End Main Loop *****************
 }
