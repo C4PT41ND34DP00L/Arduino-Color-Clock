@@ -15,7 +15,6 @@
 #include <Wire.h>
 #include "RTClib.h"
 #include <Battery.h>
-//#include <SFE_BMP180.h>
 
 // Setup RTC
 RTC_DS1307 RTC;
@@ -29,10 +28,10 @@ char daysOfTheWeek[7][12] = {"Sun","Mon", "Tues", "Wend", "Thu", "Fri", "Sat"};
 Battery battery(3000, 4200, A1);
 
 /***********************************************************************************************/
-Ucglib_SSD1331_18x96x64_UNIVISION_SWSPI ucg(/*sclk=*/ 13, /*data=*/ 11, /*cd=*/ 8, /*cs=*/ 10, /*reset=*/ 9);
+Ucglib_SSD1331_18x96x64_UNIVISION_SWSPI ucg(13, 11, 8, 10, 9);
 
 //TMP36 Pin Variables
-boolean useTMP36 = true;  // set this to false if you don not use TMP36
+boolean useTMP36 = true;  // set this to false if you do not use TMP36
 //boolean useTMP36 = false;
 #define aref_voltage 1.1 // we tie to teh internal ref (1.1 V)
 int tempPin = 0; //the analog pin that the TMP36's Vout (sense) pin is connected to
