@@ -203,8 +203,6 @@ void loop(void)
   ucg.print(battery.level());
   ucg.print("%");
   ucg.print("  ");
-
-  //delay(500);
   // **************** End Main Loop *****************
 }
 void printDigits(int digits) {
